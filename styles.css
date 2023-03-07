@@ -28,12 +28,16 @@ body {
 .input-container input {
   height: 30px;
   outline-color: #fff;
-  margin: 0px 2px 0px 0px;
-  width: calc(100% - 77px);
+  width: calc(100% - 80px);
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .input-container button {
-  background-color: red;
+  background-color: #ff0000;
   color: #fff;
   height: 36px;
   border: none;
@@ -49,4 +53,11 @@ body {
 .todo-list-item {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
+}
+.todo-list-item button {
+  border-radius: 5px;
+  background-color: yellow;
+  border: none;
+  cursor: pointer;
 }

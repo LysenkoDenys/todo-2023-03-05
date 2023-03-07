@@ -6,9 +6,17 @@ button.addEventListener("click", () => {
   const li = document.createElement("li");
   const deleteBtn = document.createElement("button");
 
-  li.innerText = input.value;
-  li.className = "todo-list-item";
-  deleteBtn.innerText = "Delete";
-  list.appendChild(li);
-  li.appendChild(deleteBtn);
+  if (input.value === "") {
+    alert("enter some text");
+  } else {
+    li.innerText = input.value;
+    li.className = "todo-list-item";
+    deleteBtn.innerText = "Delete";
+    li.appendChild(deleteBtn);
+    list.appendChild(li);
+    input.value = "";
+  }
+  deleteBtn.addEventListener("click", () => {
+    list.removeChild(li);
+  });
 });
